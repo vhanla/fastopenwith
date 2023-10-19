@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1F55FFD4-A06A-494A-A927-CA3B38753D28}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="FastOpenWith.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FastOpenWithGUI.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FastOpenWith">
+        <MSBuild Projects="FastOpenWith.dproj"/>
+    </Target>
+    <Target Name="FastOpenWith:Clean">
+        <MSBuild Projects="FastOpenWith.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FastOpenWith:Make">
+        <MSBuild Projects="FastOpenWith.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FastOpenWithGUI">
+        <MSBuild Projects="FastOpenWithGUI.dproj"/>
+    </Target>
+    <Target Name="FastOpenWithGUI:Clean">
+        <MSBuild Projects="FastOpenWithGUI.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FastOpenWithGUI:Make">
+        <MSBuild Projects="FastOpenWithGUI.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FastOpenWith;FastOpenWithGUI"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FastOpenWith:Clean;FastOpenWithGUI:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FastOpenWith:Make;FastOpenWithGUI:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
