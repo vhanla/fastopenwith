@@ -9,6 +9,7 @@ const
   MENU_ITEM_CAPTION = 'Fast Open &With';
   MENU_ITEM_SHIFTON = 'Fast Open &With Settings';
   MENU_ITEM_FOLDER  = 'Fast Open &With Folder';
+  FAST_OPEN_WITH_EXE = 'FastOpenWithGUI.exe';
 
 type
 
@@ -81,7 +82,7 @@ begin
   begin
     SetLength(szBuf, dwRet + 1);
     szBuf2 := PWideChar(szBuf);
-    Result := IncludeTrailingPathDelimiter(ExtractFileDir(szBuf2)) + 'FastOpenWith.exe';
+    Result := IncludeTrailingPathDelimiter(ExtractFileDir(szBuf2)) + FAST_OPEN_WITH_EXE;
   end;
 
 end;
