@@ -70,6 +70,7 @@
         <UWP_DelphiLogo44>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_44.png</UWP_DelphiLogo44>
         <UWP_DelphiLogo150>$(BDS)\bin\Artwork\Windows\UWP\delphi_UwpDefault_150.png</UWP_DelphiLogo150>
         <SanitizedProjectName>FastOpenWithGUI</SanitizedProjectName>
+        <Custom_Styles>&quot;Windows11 Modern Dark|VCLSTYLE|$(BDSCOMMONDIR)\Styles\Windows11.Dark.vsf&quot;</Custom_Styles>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <DCC_UsePackage>FireDACIBDriver;vclwinx;DataSnapServer;P4DPandas;P4DPyQT5;fmx;vclie;DbxCommonDriver;bindengine;IndyIPCommon;VCLRESTComponents;DBXMSSQLDriver;FireDACCommonODBC;emsclient;METROVCL;FrameStandPackage_11_1;appanalytics;IndyProtocols;vclx;Skia.Package.RTL;ChromeTabs_R;dbxcds;vcledge;P4DONNXRuntime;EasyListviewD;HGMComponents;DBXFirebirdDriver;StyleControls_d11Alexandria;TagEditor;FrameViewerXE9;JvAppFrm;FireDACSqliteDriver;DbxClientDriver;JclVcl;soapmidas;Jcl;dbexpress;JvManagedThreads;Python;CEF4DelphiVCLRTL;inet;PythonVcl;vcltouch;MonkeyMixer_;HCView_dcl_102;P4DOpenCV;JvDB;FireDACDBXDriver;fmxdae;lzrw1;JvCustom;P4DRemBG;CustomIPTransport;FireDACMSSQLDriver;JvSystem;P4DSciPy;ZCore;CEF4DelphiFMXRTL;JvControls;ZParseSql;PDFiumControl;JVEsoft;madExcept_;JvCrypt;JvJans;JvMM;IndySystem;Vue;KastriFMX;JvGlobus;JclContainers;GLScene_GPU_RT;CoolTrayIcon_XE10;JvPageComps;vclFireDAC;madDisAsm_;FireDACCommon;DataSnapServerMidas;FireDACODBCDriver;emsserverresource;DOSCommandDR;P4DScikitLearn;P4DPyTorch;ZComponent;bindcompdbx;rtl;FireDACMySQLDriver;IcsFmxD110Run;P4DPSUtil;DBXSqliteDriver;VirtualTreesDR;UWPCL;tetris;attabs_package_delphi;DBXSybaseASEDriver;VirtualShellToolsD;JvRuntimeDesign;WebView4DelphiFMXRTL;JvXPCtrls;HttpParallelDownloader;vclimg;DataSnapFireDAC;inetdbxpress;FireDAC;JvDocking;JvDlgs;xmlrtl;P4DPillow;P4DEnvironment;dsnap;JvCmp;DCP_XE7;FireDACDb2Driver;DBXOracleDriver;DBXInformixDriver;fmxobj;bindcompvclsmp;DataSnapNativeClient;DatasnapConnectorsFreePascal;SVGIconImageList;GLScene_RT;DragDropDR11A;P4DMatplotLib;NiceGridXE;ClipboardWiz;emshosting;EmbeddedWebBrowser;WindowsToast;FireDACCommonDriver;MPCommonLibD;IndyIPClient;bindcompvclwinx;EsVclComponents;emsedge;bindcompfmx;madBasic_;JvBands;inetdb;CBFMX;WebView4DelphiVCLRTL;GR32_R;P4DMoviePy;FireDACASADriver;MfPackX314;SVGIconImageListFMX;vclactnband;fmxFireDAC;FireDACInfxDriver;P4DPyPackage;DBXMySQLDriver;KastriAdMob;VclSmp;DataSnapCommon;JvPascalInterpreter;fmxase;JvPluginSystem;DBXOdbcDriver;JvTimeFramework;dbrtl;rmKlever;FireDACOracleDriver;Skia.Package.FMX;FireDACMSAccDriver;PasLibVlcPlayer;DataSnapIndy10ServerTransport;JclDeveloperTools;DzDirSeek;P4DTensorFlow;DataSnapConnectors;P4DKeras;vcldsnap;DBXInterBaseDriver;FireDACMongoDBDriver;JvWizards;PngComponentsD;FireDACTDataDriver;Skia.Package.VCL;vcldb;SynEditDR;IconFontsImageList;EmbeddedWebBrowserRuntime;SpTBXLib;JvCore;bindcomp;TextEditor.Delphi.Alexandria.Runtime;P4DH5Py;tb2k_d12;KernowSoftwareFMX;IndyCore;RESTBackendComponents;ZPlain;FireDACADSDriver;RESTComponents;IndyIPServer;vcl;dsnapxml;adortl;dsnapcon;DataSnapClient;DataSnapProviderClient;JvDotNetCtrls;JvHMI;UIRibbonPackage;P4DNLTK;P4DPyAnime4k;DBXDb2Driver;IcsCommonD110Run;emsclientfiredac;FireDACPgDriver;FireDACDSDriver;JvPrintPreview;GR32_D;ChatGptWizard;tethering;JvStdCtrls;ZDbc;bindcompvcl;P4DBoto3;CloudService;DBXSybaseASADriver;P4DNumPy;IconFontsImageListFMX;PythonFmx;soaprtl;soapserver;JvNet;$(DCC_UsePackage)</DCC_UsePackage>
@@ -134,6 +135,7 @@
             <Form>mainForm</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="FastOpenWithGUI.Settings.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -166,6 +168,12 @@
             <Deployment Version="4">
                 <DeployFile LocalName="Win32\Debug\FastOpenWithGUI.exe" Configuration="Debug" Class="ProjectOutput">
                     <Platform Name="Win32">
+                        <RemoteName>FastOpenWithGUI.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployFile LocalName="Win64\Release\FastOpenWithGUI.exe" Configuration="Release" Class="ProjectOutput">
+                    <Platform Name="Win64">
                         <RemoteName>FastOpenWithGUI.exe</RemoteName>
                         <Overwrite>true</Overwrite>
                     </Platform>
